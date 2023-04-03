@@ -7,3 +7,11 @@ module "k8s-cluster" {
   cloud_id     = var.cloud_id
   cluster_name = var.cluster_name
 }
+
+module "k8s-ingress" {
+  source = "./modules/k8s-ingress"
+
+  folder_id    = var.folder_id
+  domain-name = var.domain-name
+  email = var.email
+}
