@@ -30,6 +30,15 @@ variable "email" {
   type = string
 }
 
+variable "preemptible" {
+  type = string
+  default = "false"
+}
+
+variable "max_scale" {
+  type = number
+  default = 3
+}
 
 
 

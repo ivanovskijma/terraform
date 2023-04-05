@@ -6,6 +6,8 @@ module "k8s-cluster" {
   folder_id    = var.folder_id
   cloud_id     = var.cloud_id
   cluster_name = var.cluster_name
+  preemptible = var.preemptible
+  max_scale = var.max_scale
 }
 
 module "k8s-ingress" {

@@ -88,15 +88,17 @@ resource "yandex_kubernetes_node_group" "k8s-nodes" {
       memory = 4
     }
     scheduling_policy {
-      preemptible = false
+      preemptible = var.preemptible
     }
     # labels {
     #   "<имя метки>"="<значение метки>"
     # }
   }
   scale_policy {
-    fixed_scale {
-      size = 1
+    auto_scale {
+      min = 1
+      max = var.max_scale
+      initial = 1
     }
   }
   depends_on = [

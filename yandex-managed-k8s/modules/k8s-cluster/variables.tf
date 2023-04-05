@@ -18,6 +18,18 @@ variable "cluster_name" {
   type = string
 }
 
+variable "preemptible" {
+  type = string
+  default = "false"
+}
+
+variable "max_scale" {
+  type = number
+  default = 3
+}
+
+
+
 # variable "key_name" {
 #   type = string
 # }
